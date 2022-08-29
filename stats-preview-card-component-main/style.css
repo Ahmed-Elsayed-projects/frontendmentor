@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lexend+Deca&display=swap');
+
+:root {
+    --Very-dark-blue: hsl(233, 47%, 7%);
+    --Dark-desaturated-blue: hsl(244, 38%, 16%);
+    --Soft-violet: hsl(277, 64%, 61%);
+    --White: hsl(0, 0%, 100%);
+    --Slightly-transparent-white-1: hsla(0, 0%, 100%, 0.75);
+    --Slightly-transparent-white-2: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    max-height: 100%;
+    color: white;
+    font-family: Lexend Deca;
+    font-size: 1.219rem;
+}
+
+main {
+    min-height: 100vh;
+    width:  100%;
+    background-color: var(--Very-dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: Inter;
+    font-weight: 700;
+}
+
+.purple {
+    color: var(--Soft-violet);
+}
+
+.container {
+    width: min(1110px, 90vw);
+    background-color: var(--Dark-desaturated-blue);
+    display: flex;
+    gap: 2em;
+    border-radius: 10px;
+}
+
+.content {
+    padding: min(3em, 5vw, 10%);
+    flex: 1;
+}
+
+.content > p {
+    color: var(--Slightly-transparent-white-1);
+}
+.img {
+    flex: 1;
+    background-image: url("images/image-header-desktop.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: var(--Soft-violet);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3em;
+}
+
+.info p {
+    color: var(--Slightly-transparent-white-2);
+}
+
+.item > *{
+    margin: 0;
+}
+
+@media(max-width: 800px){
+    body {
+        text-align: center;
+        font-size: 1.063rem;
+    }
+    .container {
+        flex-direction: column-reverse;
+        gap: 0;
+        margin: max(2em) max(1em);
+    }
+
+    .img {
+        aspect-ratio: 109/80;
+        min-width: 100%;
+        background-image: url("images/image-header-mobile.jpg");
+        background-size: cover;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 10px;
+    }
+}
+
+@media(max-width: 460px) {
+    .info {
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+    }
+}

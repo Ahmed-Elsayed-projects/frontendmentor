@@ -102,6 +102,9 @@ a:hover {
 .footer {
     display: flex;
     align-items: center;
+	border-top-width: 3px;
+	border-color: yellow;
+	
 }
 
 .footer img {
