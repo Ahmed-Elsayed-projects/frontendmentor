@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: var(--Violet);
+    background-image: url("images/bg-desktop.svg");
+    background-size: cover;
+    padding: min(2em, 10%) min(3em, 10%);
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+main {
+    margin: 4em 0;
+    display: flex;
+    gap: 2.5em;
+}
+
+h1 {
+    font-family: Poppins;
+    font-weight: 600;
+}
+
+p {
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.btn {
+    background-color: #fff;
+    padding: 1em 3em;
+    border: none;
+    border-radius: 2em;
+    color: var(--Violet);
+    font-size: 1.3rem;
+    box-shadow: 0 .2rem .4rem .2rem rgb(68, 68, 68);
+}
+
+.btn:hover {
+    background-color: var(--Soft-Magenta);
+    color: #fff;
+}
+
+footer {
+    display: flex;
+    gap: 1em;
+    justify-content: flex-end;
+}
+
+ion-icon {
+    font-size: 2em;
+    color: #fff;
+}
+
+ion-icon:hover {
+    color: var(--Soft-Magenta);
+}
+
+.btn, ion-icon {
+    transition: background-color,color 350ms ;
+}
+
+@media(max-width:900px) {
+    body {
+        background-image: url("images/bg-mobile.svg");
+    }
+    main {
+        margin: 3em 0;
+        flex-direction: column;
+        text-align: center;
+    }
+    footer {
+        justify-content: center;
+    }
+}
