@@ -70,7 +70,7 @@ ion-icon:hover {
     transition: background-color,color 350ms ;
 }
 
-@media(max-width:900px) {
+@media(max-width:75rem) {
     body {
         background-image: url("images/bg-mobile.svg");
     }
